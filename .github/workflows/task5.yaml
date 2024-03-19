@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: ls -R
-      - run: echo "user - ${ secrets.WEBSITE_USER } - password - ${ secrets.WEBSITE_PASSWORD }"
+      - run: echo "user - ${{ secrets.WEBSITE_USER }} - password - ${{ secrets.WEBSITE_PASSWORD }}"
 
     
       
