@@ -1,0 +1,22 @@
+name: task 5 workflow
+on: 
+    push: 
+      paths: 
+        - website/**
+    # event - https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
+jobs:
+  example-job:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./website
+    
+         # system - https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners/about-github-hosted-runners#standard-github-hosted-runners-for-public-repositories
+    steps:
+      - uses: actions/checkout@v4
+      - run: ls -R
+      - run: echo "user - ${{ secrets.WEBSITE_USER }} - password - ${{ secrets.WEBSITE_PASSWORD }} - ${{ vars.WEBSITE_USER }}"
+
+    
+      
+      
